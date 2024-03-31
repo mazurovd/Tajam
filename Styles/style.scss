@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+body {
+
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-weight: 400;
+}
+
+p, li, ul {
+    margin: 0;
+}
+
+
+.footer_footer{
+    min-height: 50rem;
+    background-color: aqua;
+}
+
+
+
+
+@import "mixins.scss";
+@import "header.scss";
+@import "OurStory.scss";
+@import "VideoCompany.scss";
+@import "Expertise.scss";
+@import "Team.scss";
+@import "../Pages/ourStoryPage.scss";
+@import "Our_works.scss";
+@import "Our_works.Animat.css";
+@import "Reviews.scss";
+@import "Reviews.slider.styles.css";
+@import "formNews.scss";
+@import "footer.scss";
+
+
+
+

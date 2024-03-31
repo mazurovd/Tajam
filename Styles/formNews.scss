@@ -1,0 +1,108 @@
+.formNews {
+    padding: 7rem 0;
+    background-color: #fff;
+}
+
+.fomNews_content {
+    display: flex;
+    justify-content: space-between;
+    @media ($tablet-Plus) {
+        flex-direction: column;
+        align-items: center;
+    }
+    &-formContent {
+        max-width: 46rem;
+        margin-right: 10rem;
+        width: 100%;
+        @media ($tablet-Plus) {
+            margin-right: 0;
+            margin-bottom: 8rem;
+        }
+        &_title {
+            @include p($_color: #413d4b, $_fontFamily: "PlayfairDisplayBold");
+            font-size: 2.2rem;
+            letter-spacing: 0.05px;
+            text-transform: uppercase;
+            margin-bottom: 3rem;
+            @media ($tablet-Plus) {
+                text-align: center;
+            }
+        }
+        &_form {
+            display: flex;
+            flex-direction: column;
+            &-name,
+            &-email,
+            &-subject,
+            &-message {
+                @include input($_fontFamily: "RobotoLight", $_color: darken(#413d4b, 40%), $_font_size: 1.4rem);
+                margin-bottom: 2rem;
+                border: 1px solid darken(#e5e5e5, 20%);
+            }
+            &-message {
+                resize: none;
+                height: 20rem;
+                padding-top: 2rem;
+            }
+            &-submit {
+                @include button();
+                font-size: 1.6rem;
+                @media ($tablet-Plus) {
+                    align-self: center;
+                }
+            }
+            @include colorPlaceholderInput($_color: darken(#413d4b, 40%));
+        }
+    }
+}
+
+.ourClients {
+    max-width: 38rem;
+    &-title {
+        @include p($_color: #413d4b, $_fontFamily: "PlayfairDisplayBold");
+        font-size: 2.2rem;
+        letter-spacing: 0.05px;
+        text-transform: uppercase;
+        
+        @media ($tablet-Plus) {
+            text-align: center;
+        }
+    }
+    &-images {
+        display: flex;
+        justify-content: space-between;
+      //  max-height: 45rem;
+      //  height: 100%;
+        
+        @media ($mobileL) {
+            flex-direction: column;
+            max-height: none;
+        }
+        &_cont {
+            display: flex;
+            align-items: center;
+            flex-basis: 9rem;
+            &:last-child {
+                img {
+                    align-self: end;
+                }
+            }
+        }
+        &_left {
+            margin-right: 7.5rem;
+            
+            @media ($mobileL) {
+                margin-right: 0;
+            }
+        }
+        &_left,
+        &_right {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
+
+// $tablet-Plus

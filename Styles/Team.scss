@@ -1,0 +1,158 @@
+.Team {
+    background-image: url(../IMG/TeemBackground.png);
+    min-height: 71.5rem;
+    background-repeat: no-repeat;
+    background-position: 100% 75%;
+    background-size: cover;
+    padding: 7rem 0;
+
+    &_title {
+        @include p($_color: #fff, $_fontFamily: "PlayfairDisplayBold", $_align: center);
+        font-size: 2.2rem;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+
+    &_text {
+        @include p($_color: #fff, $_fontFamily: "PlayfairDisplayRegular", $_align: center);
+        font-size: 1.4rem;
+        letter-spacing: 0.75px;
+        margin-bottom: 2rem;
+    }
+
+    &_line {
+        @include line($_color: #fff);
+        opacity: 0.2;
+        margin-bottom: 4.5rem;
+    }
+
+    &_items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        user-select: none;
+    }
+
+    &_item {
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+
+        &:nth-child(4n) {
+            margin-right: 0;
+        }
+
+        @media ('max-width: 1000px') {
+            &:nth-child(4n) {
+                margin-right: 2rem;
+            }
+
+        }
+
+        &-data {
+            text-transform: uppercase;
+            border: 1px solid rgb(215, 214, 217, .5);
+            position: relative;
+            top: -3px;
+        }
+
+        &-data_name {
+            @include p($_color: #fff, $_fontFamily: "RobotoBlack", $_align: center);
+            font-size: 1.4rem;
+            letter-spacing: 0.5px;
+            padding: 1.8rem 0 0.5rem;
+        }
+
+        &-data_proff {
+            @include p($_color: #fafafa, $_fontFamily: "RobotoLight", $_align: center);
+            font-size: 1.3rem;
+            opacity: 0.7;
+            padding-bottom: 2.2rem;
+        }
+    }
+
+    &_appeal {
+        @include p($_color: #f3f3f3, $_fontFamily: "RobotoLight", $_align: center);
+        font-size: 1.4rem;
+        letter-spacing: 0.5px;
+        margin-top: 5rem;
+        margin-bottom: 2.7rem;
+    }
+
+    &_hireBtn {
+        @include button($_width: 14rem);
+        margin: 0 auto;
+        font-size: 1.6rem;
+        cursor: pointer;
+        user-select: none;
+    }
+}
+
+
+.HireUs-Modal,
+.LearnUs-Modal {
+    @include divModal();
+
+    &_content {
+        @include divModalContent();
+        border: 2px solid #fff;
+        background-color: $background;
+        color: #fff;
+        font-size: 1.8rem;
+        text-align: center;
+
+        @media ($mobileM) {
+            font-size: 1.6rem;
+        }
+
+        &-form {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+
+            @media ($tablet-Minus) {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        &-name,
+        &-number {
+            @include input($_color: #000, $_font_size: 1.4rem);
+            padding-left: 1rem;
+            margin-right: 1rem;
+            max-width: 25rem;
+            width: 100%;
+            margin-bottom: 2rem;
+
+            @media ($mobileL) {
+                margin-right: 0;
+            }
+        }
+
+        &-submit {
+            @include button();
+            height: 4.3rem;
+            cursor: pointer;
+            max-width: 10rem;
+            width: 100%;
+        }
+
+        @include colorPlaceholderInput($_color: #000);
+    }
+}
+
+.Hire_modal_close,
+.Learn_modal_close {
+    @include modalClose($_color: darken(#fff, 20%))
+}
+
+.Hire_modal_close:hover,
+.Learn_modal_close:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.modal_active {
+    display: block !important;
+}

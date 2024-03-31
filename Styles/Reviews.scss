@@ -1,0 +1,139 @@
+.Reviews {
+    background-image: url(../IMG/Reviews.background.png);
+    min-height: 50rem;
+    background-repeat: no-repeat;
+    //   background-position: 100% 75%;
+    background-size: cover;
+    padding: 10rem 0 7rem;
+    
+    @media ('max-width: 768px') {
+        padding-top: 8rem;
+    }
+    @media ('max-width: 550px') {
+        padding-top: 6rem;
+    }
+     @media ('max-width: 390px') {
+        padding-top: 5rem;
+    }
+
+    &-item {
+        margin-right: 1.4rem;
+        display: flex;
+        align-items: center;
+        max-width: 100%;
+        user-select: none;
+        
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &_image {
+            width: 100%;
+        }
+    }
+    &-slider_quote {
+        position: absolute;
+        padding: 4rem 2rem 0;
+        left: 0;
+        right: 0;
+        max-width: 81.5rem;
+        margin: 0 auto;
+        @include p($_color: #fff, $_fontFamily: "PlayfairDisplayRegular", $_align: center, $_lineHeight: 2.6rem);
+        opacity: 0.85;
+        font-size: 1.6rem;
+        letter-spacing: 0.25px;
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            content: "\“";
+            @include p($_color: #fff, $_fontFamily: "PlayfairDisplayRegular", $_align: center, $_lineHeight: 2.6rem);
+            font-size: 10rem;
+            letter-spacing: 0.3px;
+        }
+        @media ('max-width: 500px') {
+            font-size: 1.2rem;
+        }
+    }
+    &-slider_name {
+        @include p($_color: #fff, $_fontFamily: "RobotoBlack", $_align: center, $_lineHeight: 2.2rem);
+        font-size: 1.4rem;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        padding-top: 20.5rem;
+        margin-bottom: 0.25rem;
+        @media ('max-width: 792px') {
+            padding-top: 25rem;
+        }
+        @media ('max-width: 580px') {
+            padding-top: 30rem;
+        }
+        @media ('max-width: 500px') {
+            font-size: 1.2rem;
+        }
+        @media ('max-width: 420px') {
+            font-size: 1.0rem;
+        }
+         @media ('max-width: 420px') {
+            padding-top: 35rem;
+        }
+    }
+    &-slider_proff {
+        @include p($_color: #fff, $_fontFamily: "RobotoLight", $_align: center, $_lineHeight: 2.2rem);
+        opacity: 0.7;
+        font-size: 1.3rem;
+        line-height: 2.2rem;
+        text-transform: uppercase;
+        margin-bottom: 4rem;
+        
+        @media ('max-width: 500px') {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+        }
+        @media ('max-width: 420px') {
+            font-size: 0.9rem;
+        }
+    }
+    &-slider_panel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &_items {
+            display: flex;
+            align-items: center;
+        }
+        &_controls-left {
+            @include ReviewArrow ($_grad: 135deg);
+            margin-right: 3.1rem;
+            @media ('max-width: 450px') {
+                margin-right: 0.8rem;
+            }
+            @media ('max-width: 400px') {
+                margin-right: 1.4rem;
+            }
+        }
+        &_controls-right {
+            @include ReviewArrow ($_grad: -45deg);
+            margin-left: 3.1rem;
+            @media ('max-width: 450px') {
+                margin-left: 0.8rem;
+            }
+            @media ('max-width: 400px') {
+                margin-left: 1.4rem;
+            }
+        }
+    }
+    .container {
+        padding: 0 2rem;
+     //   max-height: 100vh;
+    }
+}
+
+.pointerEvents {
+    pointer-events: none;
+}
+
+.scale {
+    transform: scale(1.55);
+}

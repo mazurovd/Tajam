@@ -1,0 +1,195 @@
+$MainColor: #00e0d0;
+
+$background: #5d5876;
+$selected: #05a0af;
+
+// Media
+$tablet-Plus: 'max-width: 951px';
+$tablet: 'max-width: 768px';
+$tablet-Minus: 'max-width: 600px';
+$mobilePlusL: 'max-width: 525px';
+$mobileL: 'max-width: 426px';
+$mobileM: 'max-width: 375px';
+$tabletPro: 'max-width: 1024px';
+
+@mixin p($_color: #fff, $_fontFamily: "RobotoRegular", $_align: initial, $_lineHeight: normal) {
+    color: $_color;
+    text-align: $_align;
+    font-family: $_fontFamily;
+    line-height: $_lineHeight;
+}
+
+@mixin line($_color: $MainColor, $_height: 2px) {
+    background-color: $_color;
+    width: 5rem;
+    height: $_height;
+    margin: 0 auto;
+}
+
+
+@mixin button($_color: $MainColor, $_width: 12rem, $_borderColor: $MainColor, $_fontFamily: "HammersmithOneRegular") {
+    background-color: transparent;
+    font-family: $_fontFamily;
+    color: $_color;
+    width: $_width;
+    height: 4rem;
+    border: 1px solid $_borderColor;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2px;
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+@mixin VideoCompany_button-line($_angle:0deg) {
+    background-color: #fff;
+    height: 4.5rem;
+    width: 0.3rem;
+    display: inline-block;
+    transform: rotate($_angle);
+    position: relative;
+    border-radius: 0.2rem;
+}
+
+@mixin divModal() {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+@mixin divModalContent() {
+    width: 60%;
+    padding: 30px;
+    margin: 15% auto 0;
+
+    /*Для анимации*/
+    position: relative;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+
+    @keyframes animatetop {
+        from {
+            top: -300px;
+            opacity: 0;
+        }
+
+        to {
+            top: 0;
+            opacity: 1;
+        }
+    }
+
+    @media ($tablet-Plus) {
+        width: 70%;
+    }
+
+    @media ($tablet-Minus) {
+        width: 80%;
+    }
+
+    @media ($mobileL) {
+        width: 90%;
+    }
+}
+
+@mixin modalClose($_color: #000) {
+    transform: translate(10px, -25px);
+    font-size: 30px;
+    float: right;
+    color: $_color;
+    cursor: pointer;
+}
+
+@mixin colorPlaceholderInput($_color: #fff) {
+    input[type="text"]::-webkit-input-placeholder {
+        color: $_color;
+        //opacity: 0.7;
+    }
+
+    input[type="text"]::-moz-placeholder {
+        color: $_color;
+        //opacity: 0.7;
+    }
+    
+     textarea::-webkit-input-placeholder {
+        color: $_color;
+        //opacity: 0.7;
+    }
+
+    textarea::-moz-placeholder {
+        color: $_color;
+        //opacity: 0.7;
+    }
+
+    input[type="tel"]::-webkit-input-placeholder {
+        color: $_color;
+      //  opacity: 0.7;
+    }
+
+    input[type="tel"]::-moz-placeholder {
+        color: $_color;
+    //    opacity: 0.7;
+    }
+
+     input[type="email"]::-webkit-input-placeholder {
+        color: $_color;
+      //  opacity: 0.7;
+    }
+
+    input[type="email"]::-moz-placeholder {
+        color: $_color;
+    //    opacity: 0.7;
+    }
+    :-ms-input-placeholder {
+        /* Internet Explorer 10+ */
+        color: $_color;
+  //      opacity: 0.7;
+    }
+}
+
+@mixin input($_fontFamily: "RobotoLight", $_color: $MainColor, $_font_size:1.4rem) {
+    height: 4.5rem;
+    font-family: $_fontFamily;
+    color: $_color;
+    font-size: $_font_size;
+    line-height: 2.25rem;
+    outline: none;
+    opacity: 0.5;
+    padding-left: 2rem;
+}
+
+@mixin ReviewArrow ($_grad: 45deg){
+    width: 1.4rem;
+    height: 1.4rem;
+    border-right: 2px solid #9f9f9f;
+    border-bottom: 2px solid #9f9f9f;
+    transform: rotate($_grad);
+    cursor: pointer;
+    user-select: none;
+    
+    &:hover{
+        border-right-color: lighten(#9f9f9f, 20%);
+        border-bottom-color: lighten(#9f9f9f, 20%);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

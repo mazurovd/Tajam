@@ -1,0 +1,116 @@
+const ExpertItems = document.querySelectorAll('.Expertise_item');
+var countResB = BottomLineControl(ExpertItems);
+var countResL = LeftLineControl(ExpertItems);
+// 1 - уст. для второй с конца
+// 0 - уст. для первой с конца
+
+if(countResL != -5){
+   ExpertItems[(ExpertItems.length-1)-countResL].classList.add("ExBorderLeft");  
+}
+
+for (var i = ExpertItems.length - 1; i >= (ExpertItems.length - 1) - countResB; i--) {
+        ExpertItems[i].style.borderBottom = 'none';
+    }
+
+
+
+function BottomLineControl(ExpertItems_th) { // Контроль нижней границы //
+    var count;
+    if (ExpertItems_th.length % 3 == 0) { // 3 в ряду
+        if (ExpertItems_th.length % 2 == 0) {
+            if (window.innerWidth > 999) {
+                count = 2; // Снимаем пол у трех
+            } else if (window.innerWidth <= 999 && window.innerWidth > 686) {
+                count = 1; // Снимаем пол у двух
+            } else {
+                count = 0; // Снимаем пол у одного
+            }
+        } else {
+            if (window.innerWidth > 999) {
+                count = 2; // Снимаем пол у трех
+            } else if (window.innerWidth <= 999 && window.innerWidth > 686) {
+                count = 0; // Снимаем пол у двух
+            }
+        }
+    } else if (ExpertItems_th.length % 3 == 2) { // 2 в ряду
+        if (ExpertItems_th.length % 2 == 1) {
+            if (window.innerWidth > 999) {
+                count = 1; // Снимаем пол у двух
+            } else if (window.innerWidth <= 999) {
+                count = 0; // Снимаем пол у одного
+            }
+        }
+        else{
+            if (window.innerWidth > 999) {
+                count = 1; // Снимаем пол у двух
+            }
+            else if (window.innerWidth <= 999 && window.innerWidth > 686) {
+                count = 1; // Снимаем пол у двух
+            }
+            else{
+                count = 0;
+            }
+        }
+    } else if (ExpertItems_th.length % 3 == 1) { // 1 в ряду
+        if (ExpertItems_th.length % 2 == 0) {
+            if (window.innerWidth <= 999 && window.innerWidth > 686) {
+                count = 1; // Снимаем пол у двух
+            } else {
+                count = 0;
+            }
+        } else {
+            count = 0;
+        }
+    }
+    return count;
+}
+
+function LeftLineControl(ExpertItems_th) { // Контроль нижней границы //
+    var count;
+    if (ExpertItems_th.length % 3 == 0) { // 3 в ряду
+        if (ExpertItems_th.length % 2 == 1) {
+            if (window.innerWidth <= 999 && window.innerWidth > 686) {
+                count = 0; // задаем последнему
+            } else {
+                count = -5; // не задаем
+            }
+        } else {
+            count = -5;
+        }
+    } else if (ExpertItems_th.length % 3 == 2) { // 2 в ряду
+        if (ExpertItems_th.length % 2 == 1) {
+            if (window.innerWidth > 999) {
+                count = 1; // Снимаем пол у двух
+            } else if (window.innerWidth <= 999 && window.innerWidth > 686) {
+                count = 0; // Снимаем пол у одного
+            }
+            else{
+                count = -5;
+            }
+        }
+        else{// пример - 8
+            if (window.innerWidth > 999) {
+                count = 1; // у предпосл
+            }
+            else if (window.innerWidth <= 999) {
+                count = -5; // ни у кого
+            }
+        }
+    } else if (ExpertItems_th.length % 3 == 1) { // 1 в ряду
+        if (ExpertItems_th.length % 2 == 0) { // пример - 10
+            if (window.innerWidth > 999) {
+                count = 0; 
+            } else {
+                count = -5;
+            }
+        } else if(window.innerWidth > 686){ // пример - 13
+            count = 0;
+        }
+        else{
+            count =-5;
+        }
+    }
+    return count;
+}
+
+

@@ -1,0 +1,183 @@
+.footer {
+    padding: 7rem 0;
+    background-image: url(../IMG/footer-img.png);
+    min-height: 40rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &_content {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 7rem;
+        @media ('max-width: 1000px') {
+            flex-direction: column;
+            align-items: center;
+            div {
+                text-align: center;
+            }
+        }
+        &-item {
+            @media ('max-width: 1000px') {
+                margin-bottom: 4rem;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    &_content-left {
+        max-width: 30rem;
+        @media ('max-width: 1000px') {
+            max-width: 50rem;
+        }
+        &_description {
+            @include p($_fontFamily: "RobotoLight", $_lineHeight: 2.6rem);
+            font-size: 1.3rem;
+            letter-spacing: 0.25px;
+            width: 100%;
+        }
+        &_logotype {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            @media ('max-width: 1000px') {
+                justify-content: center;
+            }
+            &-img {
+                margin-right: 1rem;
+            }
+            &-text {
+                @include p($_color: $MainColor, $_fontFamily: "RobotoThin");
+                font-size: 3rem;
+            }
+        }
+    }
+    &_content-center {
+        max-width: 24rem;
+        width: 100%;
+        @media ('max-width: 1000px') {
+            max-width: 50rem;
+        }
+        &_title {
+            @include p($_color: #fff, $_fontFamily: "RobotoBlack", $_lineHeight: 2.6rem);
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 3rem;
+            padding-top: 1rem;
+        }
+        &_geoposition,
+        &_phone {
+            position: relative;
+            @include p($_fontFamily: "RobotoLight", $_lineHeight: 2.6rem);
+            font-size: 1.3rem;
+            letter-spacing: 0.25px;
+            padding-left: 3rem;
+            margin-bottom: 1rem;
+            &-img {
+                position: absolute;
+                left: 0;
+                top: 3px;
+            }
+        }
+        &_phone {
+            margin-bottom: 0;
+            @media ('max-width: 1000px') {
+                display: inline-block;
+            }
+        }
+    }
+    &_content-right {
+        max-width: 29rem;
+        width: 100%;
+        @media ('max-width: 1000px') {
+            max-width: 50rem;
+        }
+        &_form {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 2.7rem;
+            @include colorPlaceholderInput();
+        }
+        &_title {
+            @include p($_color: #fff, $_fontFamily: "RobotoBlack", $_lineHeight: 2.6rem);
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 3rem;
+            padding-top: 1rem;
+        }
+        &_input {
+            @include input($_fontFamily: "RobotoLight", $_color: #fff, $_font_size: 1.4rem);
+            opacity: 0.75;
+            background-color: transparent;
+            border: 1px solid #fff;
+            max-width: 21rem;
+            width: 100%;
+            margin-right: 1rem;
+            @media ('max-width: 1000px') {
+                max-width: 43rem;
+            }
+        }
+        &_subscribe {
+            @include input();
+            opacity: 0.5;
+            border: 1px solid #fff;
+            max-width: 7rem;
+            width: 100%;
+            height: 4.5rem;
+            background: url(../IMG/plane.png) no-repeat center #fff;
+            cursor: pointer;
+        }
+        &_socArticles-A {
+            text-decoration: none;
+            margin-right: 0.8rem;
+            &:last-child {
+                margin-right: 0;
+            }
+            @media ($mobileL) {
+                margin-right: 0.7rem;
+            }
+        }
+    }
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    @media ($tablet) {
+        flex-direction: column;
+        align-items: center;
+    }
+    &_articles {
+        @media ($tablet) {
+            margin-bottom: 3rem;
+        }
+    }
+    &_articles-A {
+        @include p($_color: #fff, $_fontFamily: "RobotoRegular", $_lineHeight: 2.6rem);
+        font-size: 1.4rem;
+        text-decoration: none;
+        @media ($mobileL) {
+            font-size: 1.1rem;
+        }
+        letter-spacing: 0.25px;
+        text-transform: uppercase;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+        margin-right: 3.3rem;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &_copyright {
+        @include p($_color: #fff, $_fontFamily: "RobotoRegular", $_lineHeight: 2.6rem);
+        font-size: 1.4rem;
+        @media ($mobileL) {
+            font-size: 1.2rem;
+        }
+        letter-spacing: 0.25px;
+    }
+}

@@ -1,0 +1,45 @@
+.body {
+    background-color: #342d53;
+}
+
+.Our_story {
+    @include p($_color: $MainColor, $_align: center, $_fontFamily: "RobotoBlack");
+    font-size: 3rem;
+    margin: 6rem 0 3rem;
+    &-btnBack {
+        @include button($_width: 18rem);
+        height: 5rem;
+        font-size: 2.5rem;
+        position: absolute;
+        top: 2rem;
+        left: 3rem;
+        
+         @media ($tablet) {
+            width: 8rem;
+            font-size: 1.6rem;
+        }
+        @media ($mobileL) {
+            width: 5rem;
+            height: 3rem;
+            font-size: 1.2rem;
+        }
+        @media ($mobileM) {
+            width: 4rem;
+            height: 2rem;
+            font-size: 1rem;
+        }
+    }
+}
+
+.Our_story-text {
+    @include p($_color: #fff, $_fontFamily: "RobotoLight");
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    &_parags {
+        padding: 2rem;
+        border: 2px solid $MainColor;
+    }
+    &_p {
+        text-indent: 5rem;
+    }
+}

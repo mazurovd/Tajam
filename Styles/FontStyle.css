@@ -1,0 +1,83 @@
+@font-face {
+    font-family: "RobotoBlack";
+    src: url("../Fonts/Roboto-Black.woff") format("woff"),
+        url("../Fonts/Roboto-Black.woff2") format("woff2"),
+        url("../Fonts/Roboto-Black.otf"),
+        url("../Fonts/Roboto-Black.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "RobotoRegular";
+    src: url("../Fonts/Roboto-Regular.woff") format("woff"),
+        url("../Fonts/Roboto-Regular.woff2") format("woff2"),
+        url("../Fonts/Roboto-Regular.otf"),
+        url("../Fonts/Roboto-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: "RobotoThin";
+    src: url("../Fonts/Roboto-Thin.woff") format("woff"),
+        url("../Fonts/Roboto-Thin.woff2") format("woff2"),
+        url("../Fonts/Roboto-Thin.otf"),
+        url("../Fonts/Roboto-Thin.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "RobotoLight";
+    src: url("../Fonts/Roboto-Light.woff") format("woff"),
+        url("../Fonts/Roboto-Light.woff2") format("woff2"),
+        url("../Fonts/Roboto-Light.otf"),
+        url("../Fonts/Roboto-Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PlayfairDisplayRegular";
+    src: url("../Fonts/PlayfairDisplay-Regular.woff") format("woff"),
+        url("../Fonts/PlayfairDisplayRegular.woff2") format("woff2"),
+        url("../Fonts/PlayfairDisplay-Regular.otf"),
+        url("../Fonts/PlayfairDisplayRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PlayfairDisplayBold";
+    src: url("../Fonts/PlayfairDisplay-Bold.woff") format("woff"),
+        url("../Fonts/PlayfairDisplay-Bold.woff2") format("woff2"),
+        url("../Fonts/PlayfairDisplay-Bold.otf"),
+        url("../Fonts/PlayfairDisplay-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "HammersmithOneRegular";
+    src: url("../Fonts/HammersmithOne-Regular.woff") format("woff"),
+        url("../Fonts/HammersmithOne-Regular.woff2") format("woff2"),
+        url("../HammersmithOne-Regular.otf"),
+        url("../HammersmithOne-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+
+
+
+
+

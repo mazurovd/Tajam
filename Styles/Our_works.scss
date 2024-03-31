@@ -1,0 +1,69 @@
+.Our_works {
+    padding: 7rem 0;
+    &-title {
+        @include p($_color: #413d4b, $_fontFamily: "PlayfairDisplayBold");
+        font-size: 2.2rem;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        
+        @media ($mobilePlusL) {
+            margin-bottom: 2rem;
+        }
+    }
+    &-To_dribble {
+        @include p($_color: #413d4b, $_fontFamily: "RobotoLight");
+        font-size: 1.4rem;
+        letter-spacing: 0.5px;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+        &-arrow {
+            display: inline-block;
+            transform: rotate(225deg);
+        }
+    }
+    &-top_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 7rem;
+        
+        @media ($mobilePlusL) {
+            flex-direction: column;
+        }
+    }
+    &-images {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 7rem;
+        a {
+            line-height: 0;
+            user-select: none;
+        }
+    }
+    
+    &-btnLoad{
+        @include button($_width: 14rem);
+        font-size: 1.6rem;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+}
+
+.displayNone{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
